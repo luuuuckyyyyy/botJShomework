@@ -22,15 +22,19 @@ let keywords = ["10 самых популярных шрифтов от Google"]
 let keyword = keywords[getRandom(0, keywords.length)];
 
 
-if (input != null){
+if (input !== undefined){
     input.value = keyword;
     button.click();
 } else {
     for (let i = 0; i < links.length; i++){
         if (links[i].href.indexOf("uguide.ru") != -1){
             let link = links[i];
+            console.log("нашёл!" + link)
+            
+
             link.click();
             break;
+            
         }
     }
 }
